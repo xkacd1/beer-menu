@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Golden Ale",
+    "style": "Ale",
+    "abv": "5.0%",
+    "description": "A crisp and refreshing golden ale."
+  },
+  {
+    "name": "Hazy IPA",
+    "style": "IPA",
+    "abv": "6.2%",
+    "description": "Fruity and juicy with tropical notes."
+  }
+]

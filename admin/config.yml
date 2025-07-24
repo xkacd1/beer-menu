@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "beers"
+    label: "Beers"
+    label_singular: "Beer"
+    files:
+      - file: "data/beers.json"
+        label: "Beer List"
+        name: "beer_list"
+        format: "json"
+        fields:
+          - label: "Beers"
+            name: "beers"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Style", name: "style", widget: "string" }
+              - { label: "ABV", name: "abv", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }

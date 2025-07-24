@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background-color: #fafafa;
+  color: #333;
+}
+#beer-menu > div {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
