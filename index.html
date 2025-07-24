@@ -4,10 +4,23 @@
   <meta charset="UTF-8" />
   <title>Beer Menu</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <h1>Our Beer Menu</h1>
   <div id="beer-menu"></div>
 <script src="script.js" defer></script>
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          window.location.href = "/admin/";
+        });
+      }
+    });
+    window.netlifyIdentity.init();
+  }
+</script>
 </body>
 </html>
