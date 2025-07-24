@@ -1,1 +1,6 @@
-{ "beers": [] }) 
+{
+  "beers": [
+    { "name": "IPA", "style": "India Pale Ale", "abv": 6.5, "description": "Hoppy and bitter." },
+    { "name": "Lager", "style": "Pilsner", "abv": 5.0, "description": "Light and crisp." }
+  ]
+}
