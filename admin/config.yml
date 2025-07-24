@@ -8,14 +8,18 @@ public_folder: "/images/uploads"
 collections:
   - name: "beer"
     label: "Beer Menu"
-    file: "data/beers.json"
-    format: "json"
-    fields:
-      - label: "Beers"
-        name: "beers"
-        widget: "list"
+    label_singular: "Beer"
+    files:
+      - file: "data/beers.json"
+        label: "All Beers"
+        name: "all_beers"
+        format: "json"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Style", name: "style", widget: "string" }
-          - { label: "ABV", name: "abv", widget: "number", value_type: float }
-          - { label: "Description", name: "description", widget: "text" }
+          - label: "Beers"
+            name: "beers"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Style", name: "style", widget: "string" }
+              - { label: "ABV", name: "abv", widget: "number", value_type: float }
+              - { label: "Description", name: "description", widget: "text" }
