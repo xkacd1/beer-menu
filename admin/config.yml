@@ -6,18 +6,16 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "beers"
-    label: "Beer List"
-    label_singular: "Beer"
-    folder: "data"
-    create: true
-    slug: "{{slug}}"
+  - name: "beer"
+    label: "Beer Menu"
+    file: "data/beers.json"
     format: "json"
-    extension: "json"
-    editor:
-      preview: false
     fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Style", name: "style", widget: "string" }
-      - { label: "ABV", name: "abv", widget: "number", value_type: "float", min: 0, max: 20, step: 0.1 }
-      - { label: "Description", name: "description", widget: "text" }
+      - label: "Beers"
+        name: "beers"
+        widget: "list"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Style", name: "style", widget: "string" }
+          - { label: "ABV", name: "abv", widget: "number", value_type: float }
+          - { label: "Description", name: "description", widget: "text" }
