@@ -17,6 +17,12 @@
       "style": "Random",
       "abv": -123,
       "description": "Cena je 150 KC"
+    },
+    {
+      "name": "test",
+      "style": "asda",
+      "abv": 45,
+      "description": "asd"
     }
   ]
 }
