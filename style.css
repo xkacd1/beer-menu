@@ -146,7 +146,33 @@ body {
 
 @media screen and (max-width: 1000px) {
   /* Hide desktop, show mobile table */
-  .beer-table.desktop { display: none; }
+  .beer-table.desktop { display: none; }/* PRICE COLUMN */
+  .beer-table.mobile td.price {
+    width: 200px;
+    text-align: right;
+  }
+
+  /* FIRST (FIXED) ROW */
+  .price-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+  }
+
+  /* SECOND (VALUES) ROW */
+  .price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 44px;
+    font-weight: 700;
+  }
+
+  .empty-price {
+    color: rgba(255, 90, 31, 0.35);
+  }
+}
   .beer-table.mobile { 
     display: table; 
     width: 100%;       
@@ -183,26 +209,33 @@ body {
     margin-bottom: 8px;
   }
 
-  /* Prices left/right in same row */
-  .beer-table.mobile td.name .price {
-    display: flex;
-    justify-content: space-between; 
-    width: 100%;
-    font-size: 40px;      /* readable prices */
-    font-weight: 700;
-  }
-
-  .beer-table.mobile td.name .price span {
-    flex: 1;
-    text-align: center; /* can use left/right if you prefer */
-  }
-
-  /* Optional: separate price column styling */
+/* PRICE COLUMN */
   .beer-table.mobile td.price {
+    width: 200px;
     text-align: right;
-    font-size: 40px;
+  }
+
+  /* FIRST (FIXED) ROW */
+  .price-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+  }
+
+  /* SECOND (VALUES) ROW */
+  .price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 44px;
     font-weight: 700;
   }
+
+  .empty-price {
+    color: rgba(255, 90, 31, 0.35);
+  }
+
 
   /* Row striping for readability */
   .beer-table.mobile tr:nth-child(even) {
