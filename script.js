@@ -30,15 +30,19 @@ async function loadBeers() {
     // ---------- MOBILE ROW ----------
     const rowMobile = document.createElement("tr");
     rowMobile.innerHTML = `
+      <td class="num">#${index + 1}</td>
       <td class="name">
-        <strong>${beer.nazev}</strong>
+        <strong>${beer.epm }° ${beer.nazev}</strong>
         <span>${beer.nazev_pivovaru || ""}</span>
-        <span class="price">
-          ${beer.cena04 ? beer.cena04 + ",-" : "–"} / ${beer.cena03 ? beer.cena03 + ",-" : "–"}
-        </span>
-      </td>
+        <span>${beer.styl}</span>
+      
       <td class="price">
-        ${beer.cena04 ? beer.cena04 + ",-" : "–"} / ${beer.cena03 ? beer.cena03 + ",-" : "–"}
+        <span class="sub-price ${beer.cena04 ? '' : 'empty-price'}">
+          ${beer.cena04 ? beer.cena04 + ",-" : "–"}
+        </span>
+        <span class="sub-price ${beer.cena03 ? '' : 'empty-price'}">
+          ${beer.cena03 ? beer.cena03 + ",-" : "–"}
+        </span>
       </td>
     `;
     tbodyMobile.appendChild(rowMobile);
