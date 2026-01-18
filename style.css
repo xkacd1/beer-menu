@@ -315,7 +315,7 @@ body.tv-mode  .beer-table {
     background-color: rgba(255, 90, 31, 0.05);
  }
 
-.beer-table th {
+body.tv-mode .beer-table th {
   font-size: 45px;
   font-weight: 700;
   text-transform: uppercase;
@@ -323,11 +323,11 @@ body.tv-mode  .beer-table {
   text-align: left;
 }
 
-.beer-table td {
+body.tv-mode .beer-table td {
   font-size: 50px;
 }
 
-.beer-table .num {
+body.tv-mode .beer-table .num {
   text-align: left;
   white-space: nowrap;
   font-size: 50px;
