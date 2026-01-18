@@ -5,6 +5,18 @@
   --text: #111;
 }
 
+.logo img {
+  height: 36px;      /* default desktop height */
+  margin-left: 60px; /* desktop offset */
+}
+
+.site-header {
+  max-width: 100%;
+  margin: 40px auto 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--orange);
+}
+
 body {
   background: var(--bg);
   font-family: "Nudista", system-ui, -apple-system, sans-serif;
@@ -65,4 +77,15 @@ body {
   .beer-table.mobile td.name span { text-align: left; }
 
   .beer-table.mobile td.name .price { margin-top: 4px; }
+}
+
+  .logo img {
+    height: 28px;    /* smaller logo on mobile */
+    margin-left: 16px; /* less margin for small screens */
+  }
+
+  .site-header {
+    padding-bottom: 8px;      /* maintain the bottom border space */
+    border-bottom: 2px solid var(--orange); /* keep the line */
+  }
 }
