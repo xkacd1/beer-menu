@@ -78,12 +78,22 @@ body {
   font-size: 15px;
 }
 
-.beer-table .num,
+/* First column: left-aligned */
+.beer-table .num {
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Other numeric columns: centered */
 .beer-table .epm,
 .beer-table .abv,
 .beer-table .price {
   text-align: center;
   white-space: nowrap;
+}
+
+.beer-table td.num {
+  padding-left: 10px; /* slightly less than 16px for tighter alignment */
 }
 
 .beer-table .name strong {
