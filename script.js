@@ -17,8 +17,8 @@ async function loadBeers() {
       <td class="price">
       <table class="sub-table">
         <tr>
-          <td>${beer.cena04}</td>
-          <td>${beer.cena03}</td>
+           <td class="sub-col">${beer.cena04}</td>
+           <td class="sub-col">${beer.cena03}</td>
         </tr>
       </table>
     </td>
