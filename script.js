@@ -37,9 +37,11 @@ async function loadBeers() {
         <span>${beer.styl}</span>
       
       <td class="price">
+      <span>0,4l</span>
         <span class="sub-price ${beer.cena04 ? '' : 'empty-price'}">
           ${beer.cena04 ? beer.cena04 + ",-" : "–"}
         </span>
+        <span>0,3l</span>
         <span class="sub-price ${beer.cena03 ? '' : 'empty-price'}">
           ${beer.cena03 ? beer.cena03 + ",-" : "–"}
         </span>
