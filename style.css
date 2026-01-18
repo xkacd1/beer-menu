@@ -1,15 +1,36 @@
-/* --------- COMMON STYLES ---------- */
 :root {
   --bg: #f7f2ea;
   --orange: #ff5a1f;
   --text: #111;
 }
 
-.logo img {
-  height: 36px;      /* default desktop height */
-  margin-left: 60px; /* desktop offset */
+/* -------- Fonts -------- */
+@font-face {
+  font-family: "Nudista";
+  src: url("/fonts/nudista-medium.woff2") format("woff2"),
+       url("/fonts/nudista-medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: "Nudista";
+  src: url("/fonts/nudista-semibold.woff2") format("woff2"),
+       url("/fonts/nudista-semibold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -------- Body -------- */
+body {
+  background: var(--bg);
+  font-family: "Nudista", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+}
+
+/* -------- Header -------- */
 .site-header {
   max-width: 100%;
   margin: 40px auto 20px;
@@ -17,14 +38,36 @@
   border-bottom: 2px solid var(--orange);
 }
 
-body {
-  background: var(--bg);
-  font-family: "Nudista", system-ui, -apple-system, sans-serif;
-  color: var(--text);
+.logo img {
+  height: 36px;      /* desktop logo size */
+  margin-left: 60px; /* desktop offset */
 }
 
-.menu-title { font-size: 22px; font-weight: 700; margin: 40px auto 20px; max-width: 1000px; }
+/* Mobile header adjustments */
+@media screen and (max-width: 600px) {
+  .site-header {
+    display: flex;
+    justify-content: center;   /* center logo */
+    padding-bottom: 12px;      /* keep border spacing smaller */
+    border-bottom: 2px solid var(--orange); /* ensure line stays */
+  }
 
+  .logo img {
+    height: 28px;   /* smaller logo for mobile */
+    margin-left: 0;  /* remove desktop offset */
+  }
+}
+
+/* -------- Menu Title -------- */
+.menu-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 40px auto 20px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* -------- Tables - common -------- */
 .beer-table {
   width: 100%;
   max-width: 1000px;
@@ -40,26 +83,67 @@ body {
   vertical-align: top;
 }
 
-.beer-table th { font-size: 16px; font-weight: 700; text-align: left; }
+.beer-table th {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
 
-.beer-table td { font-size: 15px; }
+.beer-table td {
+  font-size: 15px;
+}
 
-.beer-table .num { text-align: left; font-size: 12px; opacity: 0.7; font-weight: 700; padding-left: 10px; }
+.beer-table .num {
+  text-align: left;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
 .beer-table .epm,
 .beer-table .abv,
-.beer-table .price { text-align: center; white-space: nowrap; }
+.beer-table .price {
+  text-align: center;
+  white-space: nowrap;
+}
 
-.beer-table .name strong { display: block; font-weight: 700; }
-.beer-table .name span { font-size: 17px; opacity: 0.85; }
+.beer-table .name strong {
+  display: block;
+  font-weight: 700;
+}
 
-.beer-table td.price { padding: 8px 10px; text-align: center; }
-.beer-table td.price .sub-price { display: inline-block; width: 45%; text-align: center; font-weight: 700; }
-.beer-table td.price .empty-price { color: rgba(255, 90, 31, 0.3); font-weight: 700; font-size: 18px; }
+.beer-table .name span {
+  font-size: 17px;
+  opacity: 0.85;
+}
 
-/* ---------- MOBILE SPECIFIC ---------- */
+.beer-table td.price {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.beer-table td.price .sub-price {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.beer-table td.price .empty-price {
+  color: rgba(255, 90, 31, 0.3);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* -------- Mobile Table -------- */
 .beer-table.mobile { display: none; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
+  /* Hide desktop, show mobile table */
   .beer-table.desktop { display: none; }
   .beer-table.mobile { display: table; width: 100%; }
 
@@ -77,15 +161,4 @@ body {
   .beer-table.mobile td.name span { text-align: left; }
 
   .beer-table.mobile td.name .price { margin-top: 4px; }
-}
-
-  .logo img {
-    height: 28px;    /* smaller logo on mobile */
-    margin-left: 16px; /* less margin for small screens */
-  }
-
-  .site-header {
-    padding-bottom: 8px;      /* maintain the bottom border space */
-    border-bottom: 2px solid var(--orange); /* keep the line */
-  }
 }
