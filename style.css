@@ -39,22 +39,22 @@ body {
 }
 
 .logo img {
-  height: 36px;      /* desktop logo size */
+  height: 36px;
   margin-left: 60px; /* desktop offset */
 }
 
 /* Mobile header adjustments */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   .site-header {
     display: flex;
-    justify-content: left;   /* center logo */
-    padding-bottom: 12px;      /* keep border spacing smaller */
-    border-bottom: 2px solid var(--orange); /* ensure line stays */
+    justify-content: center;   /* center logo */
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--orange);
   }
 
   .logo img {
-    height: 28px;   /* smaller logo for mobile */
-    margin-left: 0;  /* remove desktop offset */
+    height: 28px;  /* smaller logo */
+    margin-left: 0;
   }
 }
 
@@ -139,26 +139,71 @@ body {
   font-size: 18px;
 }
 
-/* -------- Mobile Table -------- */
-.beer-table.mobile { display: none; }
+/* -------- MOBILE TABLE -------- */
+.beer-table.mobile { 
+  display: none; 
+}
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   /* Hide desktop, show mobile table */
   .beer-table.desktop { display: none; }
-  .beer-table.mobile { display: table; width: 100%; }
+  .beer-table.mobile { 
+    display: table; 
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-collapse: collapse;
+  }
 
+  /* Header + cells */
   .beer-table.mobile th,
-  .beer-table.mobile td { font-size: 14px; padding: 8px 12px; }
+  .beer-table.mobile td {
+    font-size: 16px;
+    padding: 12px 16px;
+    border: 1px solid var(--orange);
+  }
 
-  .beer-table.mobile td.price { text-align: right; }
-
+  /* Beer name column */
   .beer-table.mobile td.name {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  .beer-table.mobile td.name strong,
-  .beer-table.mobile td.name span { text-align: left; }
+  .beer-table.mobile td.name strong {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
 
-  .beer-table.mobile td.name .price { margin-top: 4px; }
+  .beer-table.mobile td.name span {
+    font-size: 16px;
+    opacity: 0.85;
+  }
+
+  /* Prices stacked left/right in the same row */
+  .beer-table.mobile td.name .price {
+    display: flex;
+    justify-content: space-between; /* left/right split */
+    width: 100%;
+    font-weight: 700;
+    margin-top: 6px;
+  }
+
+  .beer-table.mobile td.name .price span {
+    flex: 1;
+    text-align: center;   /* optional, you can do left/right too */
+  }
+
+  /* Price column (if using separate price cell) */
+  .beer-table.mobile td.price {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  /* Optional: row striping for readability */
+  .beer-table.mobile tr:nth-child(even) {
+    background-color: rgba(255, 90, 31, 0.05);
+  }
 }
