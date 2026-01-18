@@ -113,15 +113,15 @@ body {
   height: auto;
 }
 
-.beer-table .sub-table {
-  border-collapse: collapse; /* keep borders neat */
-  width: 100%;               /* fill the main cell */
-  table-layout: fixed;       /* important! forces equal-width columns */
+.beer-table td.price {
+  padding: 8px 10px;      /* adjust for visual balance */
+  text-align: center;      /* center both values in the cell */
 }
 
-.beer-table .sub-table td.sub-col {
-  border: none;       /* remove inner borders */
+.beer-table td.price .sub-price {
+  display: inline-block;   /* behave like two columns */
+  width: 45%;              /* both take equal space, leave 10% gap */
   text-align: center;
-  width: 50%;         /* each sub-column gets half the width */
-  padding: 2px 4px;   /* optional padding */
+  font-size: 14px;         /* adjust size */
+  opacity: 0.9;            /* optional lighter text for second value */
 }
