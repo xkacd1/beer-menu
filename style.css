@@ -78,7 +78,7 @@ body {
 
 .beer-table th,
 .beer-table td {
-  border: 1px solid var(--orange);
+  border: 2px solid var(--orange);
   padding: 14px 16px;
   vertical-align: top;
 }
@@ -199,7 +199,7 @@ body {
     font-size: 45px;    /* huge, readable text */
     line-height: 1.2;
     padding: 30px 20px; /* more padding for TV/mobile */
-    border: 1px solid var(--orange);
+    border: 2px solid var(--orange);
   }
 
   /* Beer name column */
