@@ -16,10 +16,10 @@ async function loadBeers() {
       <td class="abv">${beer.avb}%</td>
     <td class="price">
       <span class="sub-price ${beer.cena04 ? '' : 'empty-price'}">
-        ${beer.cena04 ? beer.cena04 + ",-" : "X"}
+        ${beer.cena04 ? beer.cena04 + ",-" : "–"}
       </span>
       <span class="sub-price ${beer.cena03 ? '' : 'empty-price'}">
-        ${beer.cena03 ? beer.cena03 + ",-" : "X"}
+        ${beer.cena03 ? beer.cena03 + ",-" : "–"}
       </span>
     </td>
     `;
