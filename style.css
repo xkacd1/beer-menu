@@ -25,12 +25,14 @@ body {
 .menu-title {
   font-size: 22px;
   font-weight: 700;
-  margin: 40px 0 20px;
+  margin: 40px auto 20px;       /* center block */
+  max-width: 1000px;
 }
 
 .beer-table {
   width: 100%;
   max-width: 1000px;
+  margin: 0 auto;              /* ✅ centers the table */
   border-collapse: collapse;
   border: 2px solid var(--orange);
   background: transparent;
