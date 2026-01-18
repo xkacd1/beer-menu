@@ -7,18 +7,22 @@ async function loadBeers() {
 
     const beers = data.beers || [];
 
-    beers.forEach(beer => {
-      const beerDiv = document.createElement('div');
-      beerDiv.innerHTML = `
-        <h2>${beer.name}</h2>
-        <p><strong>Style:</strong> ${beer.style} | <strong>ABV:</strong> ${beer.abv}%</p>
-        <p>${beer.description}</p>
-      `;
-      menu.appendChild(beerDiv);
-    });
-  } catch (error) {
-    console.error("Error loading beers:", error);
-  }
+    beers.forEach((beer, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td class="num">${index + 1}</td>
+      <td class="epm">${beer.epm || ""}°</td>
+      <td class="name">
+        <strong>${beer.name}</strong><br>
+        <span>${beer.brewery || ""}</span>
+      </td>
+      <td>${beer.style}</td>
+      <td class="abv">${beer.abv}%</td>
+      <td class="price">${beer.price || "48,-"}</td>
+    `;
+    tbody.appendChild(row);
+  });
 }
+
 
 loadBeers();
