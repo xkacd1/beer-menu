@@ -44,7 +44,7 @@ body {
 }
 
 /* Mobile header adjustments */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .site-header {
     display: flex;
     justify-content: center;   /* center logo */
@@ -144,7 +144,7 @@ body {
   display: none; 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   /* Hide desktop, show mobile table */
   .beer-table.desktop { display: none; }
   .beer-table.mobile { 
