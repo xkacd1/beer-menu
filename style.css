@@ -136,7 +136,7 @@ body {
 
 
 /* MOBILE STYLING: for screens <= 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   /* Make the table block and allow vertical spacing */
   .beer-table {
     background: #f0f0f0; /* temporary test */
