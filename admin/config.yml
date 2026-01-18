@@ -19,7 +19,6 @@ collections:
             name: "beers"
             widget: "list"
             fields:
-              - { label: "Poradi", name: "poradi", widget: "string", required: false}
               - { label: "EPM", name: "epm", widget: "string" }
               - { label: "Nazev piva", name: "nazev", widget: "string" }
               - { label: "Nazev pivovaru", name: "nazev_pivovaru", widget: "string" }
