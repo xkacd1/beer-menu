@@ -10,7 +10,7 @@
       "styl": "Ležák světlý",
       "abv": 6.5,
       "nazev": "Jistič",
-      "cena03": 0,
+      "cena03": "",
       "cena04": 48,
       "description": "Hoppy and bitter."
     },
@@ -24,7 +24,7 @@
       "styl": "Ležák světlý",
       "abv": 5,
       "nazev": "SVĚTLÝ LEŽÁK",
-      "cena03": 0,
+      "cena03": "",
       "cena04": 48,
       "description": "Light and crisp."
     },
@@ -38,7 +38,7 @@
       "styl": "IPA",
       "abv": -123,
       "nazev": "STRATA MODERN",
-      "cena03": 0,
+      "cena03": "",
       "cena04": 48,
       "description": "Cena je 150 KC"
     },
@@ -53,7 +53,7 @@
       "abv": 45,
       "nazev": "BEZ+GREP+POMERANČ",
       "cena03": 48,
-      "cena04": 0,
+      "cena04": "",
       "description": "asd"
     },
     {
@@ -64,7 +64,7 @@
       "styl": "NEIPA",
       "avb": 5.5,
       "cena03": 48,
-      "cena04": -3
+      "cena04": ""
     },
     {
       "poradi": "6",
@@ -74,7 +74,7 @@
       "styl": "Triple Decocted Fresh Hop Czech Pilsner",
       "avb": 3,
       "cena03": 48,
-      "cena04": 0
+      "cena04": ""
     }
   ]
 }
