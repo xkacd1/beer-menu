@@ -1,28 +1,80 @@
 {
   "beers": [
     {
+      "epm": "10",
+      "nazev_pivovaru": "Pivovar Volt",
       "name": "IPA",
+      "avb": 4,
       "style": "India Pale Ale",
+      "poradi": "1",
+      "styl": "Ležák světlý",
       "abv": 6.5,
+      "nazev": "Jistič",
+      "cena03": 0,
+      "cena04": 48,
       "description": "Hoppy and bitter."
     },
     {
+      "epm": "12",
+      "nazev_pivovaru": "Antoš",
       "name": "Lager",
+      "avb": 4.8,
       "style": "Pilsner",
+      "poradi": "2",
+      "styl": "Ležák světlý",
       "abv": 5,
+      "nazev": "SVĚTLÝ LEŽÁK",
+      "cena03": 0,
+      "cena04": 48,
       "description": "Light and crisp."
     },
     {
+      "epm": "14",
+      "nazev_pivovaru": "Mazák",
       "name": "Pifko 3",
+      "avb": 4.8,
       "style": "Random",
+      "poradi": "3",
+      "styl": "IPA",
       "abv": -123,
+      "nazev": "STRATA MODERN",
+      "cena03": 0,
+      "cena04": 48,
       "description": "Cena je 150 KC"
     },
     {
+      "epm": "11",
+      "nazev_pivovaru": "Krkonošský medvěd",
       "name": "test",
+      "avb": 4.8,
       "style": "asda",
+      "poradi": "4",
+      "styl": "ALE",
       "abv": 45,
+      "nazev": "BEZ+GREP+POMERANČ",
+      "cena03": 48,
+      "cena04": 0,
       "description": "asd"
+    },
+    {
+      "poradi": "5",
+      "epm": "15",
+      "nazev": "BONSOR FRANS",
+      "nazev_pivovaru": "Vík",
+      "styl": "NEIPA",
+      "avb": 5.5,
+      "cena03": 48,
+      "cena04": -3
+    },
+    {
+      "poradi": "6",
+      "epm": "12",
+      "nazev": "LEŽÁK TŘÍRMUTOVÝ",
+      "nazev_pivovaru": "Sibeeria",
+      "styl": "Triple Decocted Fresh Hop Czech Pilsner",
+      "avb": 3,
+      "cena03": 48,
+      "cena04": 0
     }
   ]
 }
