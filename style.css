@@ -142,7 +142,7 @@ body {
 /* -------- Mobile Table -------- */
 .beer-table.mobile { display: none; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   /* Hide desktop, show mobile table */
   .beer-table.desktop { display: none; }
   .beer-table.mobile { display: table; width: 100%; }
