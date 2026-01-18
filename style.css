@@ -113,8 +113,17 @@ body {
   height: auto;
 }
 
-.beer-table td:first-child,
-.beer-table td:last-child {
-  border: none;  /* or border-right: none depending on column */
+.beer-table td.price {
+  border: 1px solid var(--orange); /* outer border stays */
+  padding: 6px;
+  display: flex;
+  justify-content: space-between; /* split into two sub-columns */
+}
+
+.beer-table td.price span {
+  display: block;
+  text-align: center;  /* center each sub-value */
+  flex: 1;             /* equally divide space */
+  border: none;         /* remove inner borders */
 }
 
