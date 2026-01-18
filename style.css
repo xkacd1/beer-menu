@@ -47,7 +47,7 @@ body {
 @media screen and (max-width: 1000px) {
   .site-header {
     display: flex;
-    justify-content: center;   /* center logo */
+    justify-content: left;   /* center logo */
     padding-bottom: 12px;      /* keep border spacing smaller */
     border-bottom: 2px solid var(--orange); /* ensure line stays */
   }
