@@ -127,6 +127,8 @@ body {
 }
 
 .beer-table td.price .empty-price {
-  color: rgba(255, 90, 31, 0.5); /* transparent orange */
+  color: rgba(255, 90, 31, 0.3); /* transparent orange */
   font-weight: 700;               /* bold like other prices */
+  font-size: 18px; 
+  
 }
