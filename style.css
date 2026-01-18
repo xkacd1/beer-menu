@@ -178,16 +178,6 @@ body {
     border-right: none;
   }
 
-  /* Remove left/right borders on first and last cells */
-  .beer-table.mobile td:first-child,
-  .beer-table.mobile th:first-child {
-    border-left: none;
-  }
-
-  .beer-table.mobile td:last-child,
-  .beer-table.mobile th:last-child {
-    border-right: none;
-  }
 
   /* Table headers and cells */
   .beer-table.mobile th,
