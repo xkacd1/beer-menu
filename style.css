@@ -271,3 +271,22 @@ body {
     border-right: none;
   }
 }
+
+/******************************************************** */
+/* TV MODE */
+body.tv-mode .beer-table.mobile {
+  display: none !important;
+}
+
+body.tv-mode .beer-table.desktop {
+  display: table !important;
+}
+
+/* Optional: TV typography boost */
+body.tv-mode .beer-table th {
+  font-size: 20px;
+}
+
+body.tv-mode .beer-table td {
+  font-size: 18px;
+}
