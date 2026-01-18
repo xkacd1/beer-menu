@@ -66,7 +66,7 @@ body {
 .beer-table th {
   text-transform: uppercase;
   padding: 8px 14px;   /* thinner header */
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -75,7 +75,7 @@ body {
 
 .beer-table td {
    padding: 14px 16px;  /* keep body rows taller */
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .beer-table .num,
