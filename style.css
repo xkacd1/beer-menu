@@ -244,4 +244,22 @@ body {
   .beer-table.mobile tr:nth-child(even) {
     background-color: rgba(255, 90, 31, 0.05);
   }
+
+ /* 1. Remove table outer borders completely */
+  .beer-table.mobile {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+
+  /* 2. Remove left border from first column cells */
+  .beer-table.mobile th:first-child,
+  .beer-table.mobile td:first-child {
+    border-left: 0 !important;
+  }
+
+  /* 3. Remove right border from last column cells */
+  .beer-table.mobile th:last-child,
+  .beer-table.mobile td:last-child {
+    border-right: 0 !important;
+  }
 }
