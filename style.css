@@ -133,3 +133,66 @@ body {
   font-size: 18px; 
   
 }
+
+
+/* MOBILE STYLING: for screens <= 600px */
+@media screen and (max-width: 600px) {
+  /* Make the table block and allow vertical spacing */
+  .beer-table {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  /* Hide table headers */
+  .beer-table thead {
+    display: none;
+  }
+
+  /* Make each row a card */
+  .beer-table tr {
+    display: block;
+    margin-bottom: 16px;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  /* Each cell becomes a block with label */
+  .beer-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 8px;
+    font-size: 14px;
+    border: none; /* remove inner borders for mobile */
+  }
+
+  /* Use pseudo-element for label */
+  .beer-table td.num::before { content: "No"; font-weight: 700; color: var(--orange); }
+  .beer-table td.epm::before { content: "EPM"; font-weight: 700; color: var(--orange); }
+  .beer-table td.name::before { content: "Beer"; font-weight: 700; color: var(--orange); }
+  .beer-table td.styl::before { content: "Style"; font-weight: 700; color: var(--orange); }
+  .beer-table td.abv::before { content: "ABV"; font-weight: 700; color: var(--orange); }
+  .beer-table td.price::before { content: "Price"; font-weight: 700; color: var(--orange); }
+
+  /* Space between label and value */
+  .beer-table td::before {
+    flex: 1 1 40%;
+  }
+
+  .beer-table td span,
+  .beer-table td strong {
+    flex: 1 1 60%;
+    text-align: right;
+  }
+
+  /* Optional: make beer name wrap nicely */
+  .beer-table td.name {
+    flex-direction: column;
+  }
+
+  .beer-table td.name strong,
+  .beer-table td.name span {
+    text-align: left;
+  }
+}
