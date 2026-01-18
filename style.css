@@ -176,6 +176,11 @@ body {
   .beer-table.mobile {
     border-left: none;
     border-right: none;
+    display: table; 
+    width: 100%;       
+    max-width: none;
+    margin: 0;
+    border-collapse: collapse;
   }
 
 
