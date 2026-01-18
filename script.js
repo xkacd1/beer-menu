@@ -1,13 +1,9 @@
 async function loadBeers() {
-  const menu = document.getElementById("beer-menu");
+  const tbody = document.getElementById("beer-menu");
+  const response = await fetch("/data/beers.json");
+  const data = await response.json();
 
-  try {
-    const response = await fetch('/data/beers.json');
-    const data = await response.json();
-
-    const beers = data.beers || [];
-
-    beers.forEach((beer, index) => {
+  data.beers.forEach((beer, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td class="num">${index + 1}</td>
@@ -20,7 +16,7 @@ async function loadBeers() {
       <td class="abv">${beer.abv}%</td>
       <td class="price">${beer.price || "48,-"}</td>
     `;
-    menu.appendChild(row);
+    tbody.appendChild(row);
   });
 }
 
