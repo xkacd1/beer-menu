@@ -172,13 +172,13 @@ body {
   }
 
   .beer-table.mobile td.name strong {
-    font-size: 60px;   /* super readable beer name */
+    font-size: 40px;   /* super readable beer name */
     font-weight: 700;
     margin-bottom: 12px;
   }
 
   .beer-table.mobile td.name span {
-    font-size: 50px;   /* brewery name */
+    font-size: 35px;   /* brewery name */
     opacity: 0.85;
     margin-bottom: 8px;
   }
@@ -188,7 +188,7 @@ body {
     display: flex;
     justify-content: space-between; 
     width: 100%;
-    font-size: 50px;      /* readable prices */
+    font-size: 40px;      /* readable prices */
     font-weight: 700;
   }
 
@@ -200,7 +200,7 @@ body {
   /* Optional: separate price column styling */
   .beer-table.mobile td.price {
     text-align: right;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
   }
 
