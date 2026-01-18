@@ -335,3 +335,15 @@ body.tv-mode .beer-table .num {
   font-weight: 700;
   padding-left: 10px;
 }
+
+body.tv-mode .beer-table .name span {
+    font-size: 1.8rem;
+    opacity: 0.85;
+}
+
+ body.tv-mode  .beer-table.mobile {
+    border-left: 0 !important;
+    border-right: 0 !important;
+   border-top: 0 !important;
+   border-bottom: 0 !important;
+  }
