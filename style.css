@@ -316,7 +316,7 @@ body.tv-mode  .beer-table {
  }
 
 body.tv-mode .beer-table th {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -324,13 +324,13 @@ body.tv-mode .beer-table th {
 }
 
 body.tv-mode .beer-table td {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 body.tv-mode .beer-table .num {
   text-align: left;
   white-space: nowrap;
-  font-size: 50px;
+  font-size: 30px;
   opacity: 0.7;
   font-weight: 700;
   padding-left: 10px;
