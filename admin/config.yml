@@ -19,11 +19,11 @@ collections:
             name: "beers"
             widget: "list"
             fields:
-              - { label: "Poradi", name: "poradi", widget: "string" }
+              - { label: "Poradi", name: "poradi", widget: "string", required: false}
               - { label: "EPM", name: "epm", widget: "string" }
               - { label: "Nazev piva", name: "nazev", widget: "string" }
               - { label: "Nazev pivovaru", name: "nazev_pivovaru", widget: "string" }
               - { label: "Styl", name: "styl", widget: "string" }
               - { label: "ABV", name: "avb", widget: "number", value_type: float }
-              - { label: "Cena 0,4l", name: "cena04", widget: "number", value_type: float }
-              - { label: "Cena 0,3l", name: "cena03", widget: "number", value_type: float }
+              - { label: "Cena 0,4l", name: "cena04", widget: "number", value_type: float, required: false}
+              - { label: "Cena 0,3l", name: "cena03", widget: "number", value_type: float, required: false}
