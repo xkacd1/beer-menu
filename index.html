@@ -8,39 +8,55 @@
 </head>
 <body>
   <header class="site-header">
-  <div class="logo">
-    <img src="/images/logo.svg" alt="Beer Street">
-  </div>
-</header>
- <h2 class="menu-title">Dnes na čepu / Today on Tap</h2>
+    <div class="logo">
+      <img src="/images/logo.svg" alt="Beer Street">
+    </div>
+  </header>
 
-<table class="beer-table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>EPM</th>
-      <th>NÁZEV PIVA / PIVOVAR</th>
-      <th>STYL</th>
-      <th>ABV</th>
-      <th>0,4l / 0,3l</th>
-    </tr>
-  </thead>
-  <tbody id="beer-menu">
-    <!-- JS inserts rows here -->
-  </tbody>
-</table>
-<script src="script.js" defer></script>
+  <h2 class="menu-title">Dnes na čepu / Today on Tap</h2>
+
+  <!-- Desktop Table -->
+  <table class="beer-table desktop">
+    <thead>
+      <tr>
+        <th></th>
+        <th>EPM</th>
+        <th>NÁZEV PIVA / PIVOVAR</th>
+        <th>STYL</th>
+        <th>ABV</th>
+        <th>0,4l / 0,3l</th>
+      </tr>
+    </thead>
+    <tbody id="beer-menu-desktop">
+      <!-- JS inserts rows here -->
+    </tbody>
+  </table>
+
+  <!-- Mobile Table -->
+  <table class="beer-table mobile">
+    <thead>
+      <tr>
+        <th>Beer</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody id="beer-menu-mobile">
+      <!-- JS inserts rows here -->
+    </tbody>
+  </table>
+
+  <script src="script.js" defer></script>
   <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          window.location.href = "/admin/";
-        });
-      }
-    });
-    window.netlifyIdentity.init();
-  }
-</script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            window.location.href = "/admin/";
+          });
+        }
+      });
+      window.netlifyIdentity.init();
+    }
+  </script>
 </body>
 </html>
