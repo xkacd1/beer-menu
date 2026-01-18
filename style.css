@@ -143,13 +143,12 @@ body {
 .beer-table.mobile { 
   display: none; 
 }
-
 @media screen and (max-width: 1000px) {
   /* Hide desktop, show mobile table */
   .beer-table.desktop { display: none; }
   .beer-table.mobile { 
     display: table; 
-    width: 100%;
+    width: 100%;       /* fill entire mobile width */
     max-width: none;
     margin: 0;
     border-collapse: collapse;
@@ -158,8 +157,9 @@ body {
   /* Header + cells */
   .beer-table.mobile th,
   .beer-table.mobile td {
-    font-size: 16px;
-    padding: 12px 16px;
+    font-size: 20px;    /* large and readable */
+    line-height: 1.4;   /* add spacing for readability */
+    padding: 16px 12px; /* bigger touch-friendly padding */
     border: 1px solid var(--orange);
   }
 
@@ -171,34 +171,35 @@ body {
   }
 
   .beer-table.mobile td.name strong {
-    font-size: 18px;
+    font-size: 22px;   /* large for beer name */
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .beer-table.mobile td.name span {
-    font-size: 16px;
+    font-size: 18px;   /* brewery name slightly smaller */
     opacity: 0.85;
+    margin-bottom: 4px;
   }
 
-  /* Prices stacked left/right in the same row */
+  /* Prices left/right in same row */
   .beer-table.mobile td.name .price {
     display: flex;
-    justify-content: space-between; /* left/right split */
+    justify-content: space-between; 
     width: 100%;
+    font-size: 20px;      /* readable prices */
     font-weight: 700;
-    margin-top: 6px;
   }
 
   .beer-table.mobile td.name .price span {
     flex: 1;
-    text-align: center;   /* optional, you can do left/right too */
+    text-align: center; /* optional: left/right instead of center */
   }
 
-  /* Price column (if using separate price cell) */
+  /* Optional: separate price column styling */
   .beer-table.mobile td.price {
     text-align: right;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
   }
 
