@@ -114,6 +114,7 @@ body {
 }
 
 .beer-table td.price {
+  border: 1px solid var(--orange); /* outer border stays */
   padding: 6px;
   display: flex;
   justify-content: space-between; /* split into two sub-columns */
