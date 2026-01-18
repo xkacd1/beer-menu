@@ -32,31 +32,43 @@ body {
 
 /* -------- Header -------- */
 .site-header {
-  max-width: 100%;
-  margin: 40px auto 20px;
+  width: 100%;
   padding-bottom: 16px;
   border-bottom: 2px solid var(--orange);
 }
 
-.logo img {
+.desktop-header {
+  margin: 40px auto 20px;
+}
+
+.desktop-header .logo img {
   height: 36px;
-  margin-left: 60px; /* desktop offset */
+  margin-left: 60px;
+}
+
+/* Hide mobile header by default */
+.mobile-header {
+  display: none;
 }
 
 /* Mobile header adjustments */
 @media screen and (max-width: 1000px) {
-  .site-header {
-    display: flex;
-    justify-content: center;   /* center logo */
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--orange);
+
+  /* Switch headers */
+  .desktop-header {
+    display: none;
   }
 
-  .logo img {
-    height: 28px;  /* smaller logo */
-    margin-left: 0;
+  .mobile-header {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
   }
-}
+
+  .mobile-header .logo img {
+    height: 70px;   /* BIG & readable */
+    margin: 0;
+  }
 
 /* -------- Menu Title -------- */
 .menu-title {
