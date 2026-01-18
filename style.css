@@ -30,8 +30,11 @@ body {
 
 .beer-table {
   width: 100%;
+  max-width: 1000px;
   border-collapse: collapse;
   border: 2px solid var(--orange);
+  background: transparent;
+}
 
 .beer-table th,
 .beer-table td {
