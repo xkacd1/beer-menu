@@ -9,12 +9,12 @@ async function loadBeers() {
       <td class="num">${index + 1}</td>
       <td class="epm">${beer.epm || ""}°</td>
       <td class="name">
-        <strong>${beer.name}</strong><br>
-        <span>${beer.brewery || ""}</span>
+        <strong>${beer.nazev}</strong><br>
+        <span>${beer.nazev_pivovaru || ""}</span>
       </td>
-      <td>${beer.style}</td>
-      <td class="abv">${beer.abv}%</td>
-      <td class="price">${beer.price || "48,-"}</td>
+      <td>${beer.styl}</td>
+      <td class="abv">${beer.avb}%</td>
+      <td class="price">${beer.cena04</td>
     `;
     tbody.appendChild(row);
   });
