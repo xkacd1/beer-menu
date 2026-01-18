@@ -278,6 +278,15 @@ body.tv-mode .beer-table.mobile {
   display: none !important;
 }
 
+body.tv-mode .site-header {
+  display: none !important;
+}
+
+body.tv-mode .menu-title {
+  display: none !important;
+}
+
+
 body.tv-mode .beer-table.desktop {
   display: table !important;
 }
