@@ -6,7 +6,7 @@ async function loadBeers() {
   data.beers.forEach((beer, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td class="num">${index + 1}</td>
+      <td class="num">#${index + 1}</td>
       <td class="epm">${beer.epm || ""}°</td>
       <td class="name">
         <strong>${beer.nazev}</strong>
