@@ -114,14 +114,22 @@ body {
 }
 
 .beer-table td.price {
-  padding: 8px 10px;      /* adjust for visual balance */
-  text-align: center;      /* center both values in the cell */
+  padding: 8px 10px;  /* adjust as needed */
+  width: 100%;
+  white-space: nowrap;
 }
 
-.beer-table td.price .sub-price {
-  display: inline-block;   /* behave like two columns */
-  width: 45%;              /* both take equal space, leave 10% gap */
-  text-align: center;
-  font-size: 14px;         /* adjust size */
-  opacity: 0.9;            /* optional lighter text for second value */
+.beer-table td.price .price-left,
+.beer-table td.price .price-right {
+  display: inline-block;
+  width: 48%;          /* nearly half width for each */
+  vertical-align: middle;
+}
+
+.beer-table td.price .price-left {
+  text-align: left;    /* aligns first value to left */
+}
+
+.beer-table td.price .price-right {
+  text-align: right;   /* aligns second value to right */
 }
