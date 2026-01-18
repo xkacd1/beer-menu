@@ -125,3 +125,8 @@ body {
   font-size: 14px;         /* adjust size */
   opacity: 0.9;            /* optional lighter text for second value */
 }
+
+.beer-table td.price .empty-price {
+  color: rgba(255, 90, 31, 0.5); /* transparent orange */
+  font-weight: 700;               /* bold like other prices */
+}
