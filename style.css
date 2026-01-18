@@ -44,7 +44,7 @@ body {
 }
 
 /* Mobile header adjustments */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .site-header {
     display: flex;
     justify-content: center;   /* center logo */
