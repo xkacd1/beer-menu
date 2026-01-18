@@ -325,6 +325,7 @@ body.tv-mode .beer-table th {
 
 body.tv-mode .beer-table td {
   font-size: 1.8rem;
+  color: #E95F25;
 }
 
 body.tv-mode .beer-table .num {
@@ -339,6 +340,7 @@ body.tv-mode .beer-table .num {
 body.tv-mode .beer-table .name span {
     font-size: 1.8rem;
     opacity: 0.85;
+    color: #E95F25;
 }
 
  body.tv-mode  .beer-table.mobile {
