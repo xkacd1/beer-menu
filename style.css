@@ -114,7 +114,6 @@ body {
 }
 
 .beer-table td.price {
-  border: none;
   padding: 6px;
   display: flex;
   justify-content: space-between; /* split into two sub-columns */
