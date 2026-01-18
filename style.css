@@ -122,7 +122,7 @@ body {
   display: inline-block;   /* behave like two columns */
   width: 45%;              /* both take equal space, leave 10% gap */
   text-align: center;
-  font-size: 17px;         /* adjust size */
+  font-size: 15px;         /* adjust size */
   opacity: 0.9;            /* optional lighter text for second value */
 }
 
