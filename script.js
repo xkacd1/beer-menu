@@ -15,8 +15,8 @@ async function loadBeers() {
       <td>${beer.styl}</td>
       <td class="abv">${beer.avb}%</td>
     <td class="price">
-      <span class="sub-price">${beer.cena04 ? beer.cena04 + ",-" : "x"}</span>
-      <span class="sub-price">${beer.cena03 ? beer.cena03 + ",-" : "x"}</span>
+      <span class="sub-price">${beer.cena04 ? beer.cena04 + ",-" : '<span class="empty-price">X</span>'}</span>
+      <span class="sub-price">${beer.cena03 ? beer.cena03 + ",-" : '<span class="empty-price">X</span>'}</span>
     </td>
     `;
     tbody.appendChild(row);
