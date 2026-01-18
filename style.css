@@ -1,11 +1,65 @@
-body {
-  font-family: sans-serif;
-  padding: 2rem;
-  background-color: #fafafa;
-  color: #333;
+:root {
+  --bg: #f7f2ea;
+  --orange: #ff5a1f;
+  --text: #111;
 }
-#beer-menu > div {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+
+body {
+  background: var(--bg);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: var(--text);
+}
+
+.menu-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 40px 0 20px;
+}
+
+.beer-table {
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  border: 2px solid var(--orange);
+  background: transparent;
+}
+
+.beer-table th,
+.beer-table td {
+  border: 1px solid var(--orange);
+  padding: 14px 16px;
+  vertical-align: top;
+}
+
+.beer-table th {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.beer-table td {
+  font-size: 14px;
+}
+
+.beer-table .num,
+.beer-table .epm,
+.beer-table .abv,
+.beer-table .price {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.beer-table .name strong {
+  display: block;
+  font-weight: 700;
+}
+
+.beer-table .name span {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.beer-table tr {
+  height: 70px;
 }
