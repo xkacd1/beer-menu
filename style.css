@@ -1,25 +1,8 @@
+/* --------- COMMON STYLES ---------- */
 :root {
   --bg: #f7f2ea;
   --orange: #ff5a1f;
   --text: #111;
-}
-
-@font-face {
-  font-family: "Nudista";
-  src: url("/fonts/nudista-medium.woff2") format("woff2"),
-       url("/fonts/nudista-medium.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nudista";
-  src: url("/fonts/nudista-semibold.woff2") format("woff2"),
-       url("/fonts/nudista-semibold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
 }
 
 body {
@@ -28,32 +11,14 @@ body {
   color: var(--text);
 }
 
-.site-header {
-  max-width: 100%;
-  margin: 40px auto 20px;
-  padding-bottom: 16px;
-  border-bottom: 2px solid var(--orange);
-}
-
-.logo img {
-  height: 36px;
-  margin-left: 60px; 
-}
-
-.menu-title {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 40px auto 20px;       /* center block */
-  max-width: 1000px;
-}
+.menu-title { font-size: 22px; font-weight: 700; margin: 40px auto 20px; max-width: 1000px; }
 
 .beer-table {
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;              /* ✅ centers the table */
+  margin: 0 auto;
   border-collapse: collapse;
   border: 2px solid var(--orange);
-  background: transparent;
 }
 
 .beer-table th,
@@ -63,74 +28,41 @@ body {
   vertical-align: top;
 }
 
-.beer-table th {
-  text-transform: uppercase;
-  padding: 8px 14px;   /* thinner header */
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  text-align: left;
-}
+.beer-table th { font-size: 16px; font-weight: 700; text-align: left; }
 
-.beer-table td {
-   padding: 14px 16px;  /* keep body rows taller */
-  font-size: 15px;
-}
+.beer-table td { font-size: 15px; }
 
-/* First column: left-aligned */
-.beer-table .num {
-  text-align: left;
-  white-space: nowrap;
-  font-size: 12px;      /* slightly smaller than 15px body text */
-  opacity: 0.7;         /* makes it more transparent */
-  font-weight: 700;
-}
-
-/* Other numeric columns: centered */
+.beer-table .num { text-align: left; font-size: 12px; opacity: 0.7; font-weight: 700; padding-left: 10px; }
 .beer-table .epm,
 .beer-table .abv,
-.beer-table .price {
-  text-align: center;
-  white-space: nowrap;
-}
+.beer-table .price { text-align: center; white-space: nowrap; }
 
-.beer-table td.num {
-  padding-left: 10px; /* slightly less than 16px for tighter alignment */
-}
+.beer-table .name strong { display: block; font-weight: 700; }
+.beer-table .name span { font-size: 17px; opacity: 0.85; }
 
-.beer-table .name strong {
-  display: block;
-  font-weight: 700;
-}
+.beer-table td.price { padding: 8px 10px; text-align: center; }
+.beer-table td.price .sub-price { display: inline-block; width: 45%; text-align: center; font-weight: 700; }
+.beer-table td.price .empty-price { color: rgba(255, 90, 31, 0.3); font-weight: 700; font-size: 18px; }
 
-.beer-table .name span {
-  font-size: 17px;
-  opacity: 0.85;
-}
+/* ---------- MOBILE SPECIFIC ---------- */
+.beer-table.mobile { display: none; }
 
-.beer-table tr {
-  height: auto;
-}
+@media screen and (max-width: 600px) {
+  .beer-table.desktop { display: none; }
+  .beer-table.mobile { display: table; width: 100%; }
 
-.beer-table td.price {
-  padding: 8px 10px;      /* adjust for visual balance */
-  text-align: center;      /* center both values in the cell */
-}
+  .beer-table.mobile th,
+  .beer-table.mobile td { font-size: 14px; padding: 8px 12px; }
 
-.beer-table td.price .sub-price {
-  display: inline-block;   /* behave like two columns */
-  width: 45%;              /* both take equal space, leave 10% gap */
-  text-align: center;
-  font-size: 15px;         /* adjust size */
-  opacity: 0.9;            /* optional lighter text for second value */
-  font-weight: 700;  
-}
+  .beer-table.mobile td.price { text-align: right; }
 
-.beer-table td.price .empty-price {
-  color: rgba(255, 90, 31, 0.3); /* transparent orange */
-  font-weight: 700;               /* bold like other prices */
-  font-size: 18px; 
-  
-}
+  .beer-table.mobile td.name {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .beer-table.mobile td.name strong,
+  .beer-table.mobile td.name span { text-align: left; }
+
+  .beer-table.mobile td.name .price { margin-top: 4px; }
+}
