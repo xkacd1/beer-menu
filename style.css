@@ -49,7 +49,7 @@ body {
     display: flex;
     justify-content: left;   /* center logo */
     padding-bottom: 12px;
-    border-bottom: 2px solid var(--orange);
+    border-bottom: none;
   }
 
   .logo img {
