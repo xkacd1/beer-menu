@@ -306,6 +306,11 @@ body.tv-mode {
 
 body.tv-mode  .beer-table {
   width: 100%;
+  max-width: none;
   margin: 0 auto;
   border-collapse: collapse;
 }
+
+ body.tv-mode .beer-table tr:nth-child(even) {
+    background-color: rgba(255, 90, 31, 0.05);
+ }
