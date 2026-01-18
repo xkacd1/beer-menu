@@ -124,6 +124,7 @@ body {
   text-align: center;
   font-size: 15px;         /* adjust size */
   opacity: 0.9;            /* optional lighter text for second value */
+  font-weight: 700;  
 }
 
 .beer-table td.price .empty-price {
