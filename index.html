@@ -7,8 +7,23 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <h1>Dnes na čepu / Today on Tap</h1>
-  <div id="beer-menu"></div>
+ <h2 class="menu-title">Dnes na čepu / Today on Tap</h2>
+
+<table class="beer-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>EPM</th>
+      <th>NÁZEV PIVA / PIVOVAR</th>
+      <th>STYL</th>
+      <th>ABV</th>
+      <th>0,4l / 0,3l</th>
+    </tr>
+  </thead>
+  <tbody id="beer-menu">
+    <!-- JS inserts rows here -->
+  </tbody>
+</table>
 <script src="script.js" defer></script>
   <script>
   if (window.netlifyIdentity) {
