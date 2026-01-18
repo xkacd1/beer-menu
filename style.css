@@ -100,7 +100,3 @@ body {
   height: auto;
 }
 
-.beer-table th.num {
-  text-align: left;  /* aligns first column to left */
-  padding: 7px 8px;
-}
