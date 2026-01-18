@@ -10,6 +10,17 @@ body {
   color: var(--text);
 }
 
+.site-header {
+  max-width: 1000px;
+  margin: 40px auto 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--orange);
+}
+
+.logo img {
+  height: 36px;
+}
+
 .menu-title {
   font-size: 22px;
   font-weight: 700;
