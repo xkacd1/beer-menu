@@ -44,7 +44,7 @@ body {
 }
 
 /* Mobile header adjustments */
-@media (hover: none) and (pointer: coarse) {
+@media (any-hover: none) and (any-pointer: coarse) {
   .site-header {
     display: flex;
     justify-content: left;   /* center logo */
