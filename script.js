@@ -8,7 +8,7 @@ async function loadBeers() {
     // ---------- DESKTOP ROW ----------
     const rowDesktop = document.createElement("tr");
     rowDesktop.innerHTML = `
-      <td class="num">#${index + 1}</td>
+      <td class="num">${index + 1}</td>
       <td class="epm">${beer.epm || ""}°</td>
       <td class="name">
         <strong>${beer.nazev}</strong>
@@ -30,7 +30,7 @@ async function loadBeers() {
     // ---------- MOBILE ROW ----------
     const rowMobile = document.createElement("tr");
     rowMobile.innerHTML = `
-      <td class="num">#${index + 1}</td>
+      <td class="num">${index + 1}</td>
       <td class="name">
         <strong>${beer.epm }° ${beer.nazev}</strong>
         <span>${beer.nazev_pivovaru || ""}</span>
