@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beer Menu</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    /* Run before render so tv-mode class is set before CSS is applied */
+    if (window.location.search.includes("tv")) {
+      document.documentElement.classList.add("tv-mode");
+    }
+  </script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="">
-<header class="site-header">
-  <div class="logo">
-    <img src="/images/logo.svg" alt="Beer Street">
-  </div>
-</header>
+  <header class="site-header">
+    <div class="logo">
+      <img src="/images/logo.svg" alt="Beer Street">
+    </div>
+  </header>
 
   <h2 class="menu-title">Dnes na čepu / Today on Tap</h2>
 
@@ -47,11 +54,10 @@
   </table>
 
   <script>
-  if (window.location.search.includes("tv")) {
-    document.body.classList.add("tv-mode");
-  }
-</script>
-
+    if (window.location.search.includes("tv")) {
+      document.body.classList.add("tv-mode");
+    }
+  </script>
   <script src="script.js" defer></script>
   <script>
     if (window.netlifyIdentity) {
