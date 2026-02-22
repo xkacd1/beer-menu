@@ -1,75 +1,346 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beer Menu</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    /* Run before render so tv-mode class is set before CSS is applied */
-    if (window.location.search.includes("tv")) {
-      document.documentElement.classList.add("tv-mode");
-    }
-  </script>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body class="">
-  <header class="site-header">
-    <div class="logo">
-      <img src="/images/logo.svg" alt="Beer Street">
-    </div>
-  </header>
+:root {
+  --bg: #f7f2ea;
+  --orange: #ff5a1f;
+  --text: #111;
+}
 
-  <h2 class="menu-title">Dnes na čepu / Today on Tap</h2>
+/* -------- Fonts -------- */
+@font-face {
+  font-family: "Nudista";
+  src: url("/fonts/nudista-medium.woff2") format("woff2"),
+       url("/fonts/nudista-medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  <!-- Desktop Table -->
-  <table class="beer-table desktop">
-    <thead>
-      <tr>
-        <th></th>
-        <th>EPM</th>
-        <th>NÁZEV PIVA / PIVOVAR</th>
-        <th>STYL</th>
-        <th>ABV</th>
-        <th>0,4l / 0,3l</th>
-      </tr>
-    </thead>
-    <tbody id="beer-menu-desktop">
-      <!-- JS inserts rows here -->
-    </tbody>
-  </table>
+@font-face {
+  font-family: "Nudista";
+  src: url("/fonts/nudista-semibold.woff2") format("woff2"),
+       url("/fonts/nudista-semibold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
-  <!-- Mobile Table -->
-  <table class="beer-table mobile">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Beer</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody id="beer-menu-mobile">
-      <!-- JS inserts rows here -->
-    </tbody>
-  </table>
+/* -------- Body -------- */
+body {
+  background: var(--bg);
+  font-family: "Nudista", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+}
 
-  <script>
-    if (window.location.search.includes("tv")) {
-      document.body.classList.add("tv-mode");
-    }
-  </script>
-  <script src="script.js" defer></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            window.location.href = "/admin/";
-          });
-        }
-      });
-      window.netlifyIdentity.init();
-    }
-  </script>
-</body>
-</html>
+/* -------- Header -------- */
+.site-header {
+  max-width: 100%;
+  margin: 20px auto 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--orange);
+}
+
+.logo img {
+  height: 36px;
+  margin-left: 60px; /* desktop offset */
+}
+
+/* Mobile header adjustments */
+@media screen and (max-width: 768px) {
+  .site-header {
+    display: flex;
+    justify-content: left;
+    padding-bottom: 12px;
+    border-bottom: none;
+  }
+
+  .logo img {
+    height: 70px;
+    margin-left: 10px;
+  }
+}
+
+/* -------- Menu Title -------- */
+.menu-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 40px auto 20px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* -------- Tables - common -------- */
+.beer-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.beer-table th,
+.beer-table td {
+  border: 1px solid var(--orange);
+  padding: 14px 16px;
+  vertical-align: top;
+}
+
+.beer-table th {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.beer-table td {
+  font-size: 15px;
+}
+
+.beer-table .num {
+  text-align: left;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.beer-table .epm,
+.beer-table .abv,
+.beer-table .price {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.beer-table .name strong {
+  display: block;
+  font-weight: 700;
+}
+
+.beer-table .name span {
+  font-size: 17px;
+  opacity: 0.85;
+}
+
+.beer-table td.price {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.beer-table td.price .sub-price {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.beer-table td.price .empty-price {
+  color: rgba(255, 90, 31, 0.3);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* -------- MOBILE TABLE -------- */
+.beer-table.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* Hide desktop, show mobile table */
+  .beer-table.desktop { display: none; }
+
+  /* -------- Menu Title -------- */
+  .menu-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 14px auto 8px;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  /* FIRST (FIXED) ROW */
+  .price-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 4px;
+  }
+
+  /* SECOND (VALUES) ROW */
+  .price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .empty-price {
+    color: rgba(255, 90, 31, 0.35);
+  }
+
+  .beer-table.mobile {
+    border-left: none;
+    border-right: none;
+    display: table;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-collapse: collapse;
+  }
+
+  /* Table headers and cells - top + right borders only, avoids doubled lines */
+  .beer-table.mobile th,
+  .beer-table.mobile td {
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 10px 8px;
+    border: none;
+    border-top: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
+    vertical-align: top;
+  }
+
+  /* No outer left/right borders */
+  .beer-table.mobile th:first-child,
+  .beer-table.mobile td:first-child {
+    border-left: none;
+  }
+
+  .beer-table.mobile th:last-child,
+  .beer-table.mobile td:last-child {
+    border-right: none;
+  }
+
+  /* Bottom border on last row */
+  .beer-table.mobile tr:last-child th,
+  .beer-table.mobile tr:last-child td {
+    border-bottom: 1px solid var(--orange);
+  }
+
+  /* Beer name column */
+  .beer-table.mobile td.name {
+    vertical-align: top;
+  }
+
+  .beer-table.mobile td.name strong,
+  .beer-table.mobile td.name span {
+    display: block;
+  }
+
+  .beer-table.mobile td.name strong {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .beer-table.mobile td.name span {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-bottom: 4px;
+  }
+
+  /* PRICE COLUMN */
+  .beer-table.mobile td.price {
+    width: auto;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* Row striping for readability */
+  .beer-table.mobile tr:nth-child(even) {
+    background-color: rgba(255, 90, 31, 0.05);
+  }
+}
+
+/* -------- Table Logo -------- */
+.table-logo {
+  display: none;
+}
+
+/* -------- TV MODE -------- */
+body.tv-mode .beer-table.mobile {
+  display: none !important;
+}
+
+body.tv-mode .table-logo {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+}
+
+body.tv-mode .site-header {
+  display: none !important;
+}
+
+body.tv-mode .menu-title {
+  display: none !important;
+}
+
+body.tv-mode .beer-table.desktop {
+  display: table !important;
+}
+
+body.tv-mode .beer-table th {
+  font-size: 20px;
+}
+
+body.tv-mode .beer-table td {
+  font-size: 18px;
+}
+
+body.tv-mode {
+  zoom: 1;
+}
+
+body.tv-mode .beer-table {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+body.tv-mode .beer-table tr:nth-child(even) {
+  background-color: rgba(255, 90, 31, 0.05);
+}
+
+body.tv-mode .beer-table th {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: var(--text);
+}
+
+body.tv-mode .beer-table td {
+  font-size: 1.8rem;
+  color: var(--text);
+}
+
+body.tv-mode .beer-table .num {
+  text-align: left;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  opacity: 0.7;
+  font-weight: 700;
+  padding-left: 10px;
+  color: var(--text);
+}
+
+/* Third column (beer name) - orange text, black header */
+body.tv-mode .beer-table td.name {
+  color: #E95F25;
+}
+
+body.tv-mode .beer-table td.name strong,
+body.tv-mode .beer-table td.name span {
+  color: #E95F25;
+}
+
+body.tv-mode .beer-table.mobile {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
