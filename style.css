@@ -197,6 +197,7 @@ body {
     border: none;
     border-top: 1px solid var(--orange);
     border-right: 1px solid var(--orange);
+    vertical-align: top;
   }
 
   /* Left edge of first column */
@@ -213,9 +214,12 @@ body {
 
   /* Beer name column */
   .beer-table.mobile td.name {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    vertical-align: top;
+  }
+
+  .beer-table.mobile td.name strong,
+  .beer-table.mobile td.name span {
+    display: block;
   }
 
   .beer-table.mobile td.name strong {
