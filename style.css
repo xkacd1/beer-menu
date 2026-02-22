@@ -28,6 +28,7 @@ body {
   background: var(--bg);
   font-family: "Nudista", system-ui, -apple-system, sans-serif;
   color: var(--text);
+  font-weight: 700;
 }
 
 /* -------- Header -------- */
