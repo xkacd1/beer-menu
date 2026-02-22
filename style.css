@@ -240,11 +240,22 @@ body {
     margin-bottom: 4px;
   }
 
+  /* NUMBER COLUMN */
+  .beer-table.mobile td.num {
+    width: 1%;
+    white-space: nowrap;
+  }
+
   /* PRICE COLUMN */
   .beer-table.mobile td.price {
-    width: auto;
+    width: 30%;
     text-align: right;
     white-space: nowrap;
+  }
+
+  /* NAME COLUMN - takes all remaining space */
+  .beer-table.mobile td.name {
+    width: auto;
   }
 
   /* Row striping for readability */
