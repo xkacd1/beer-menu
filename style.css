@@ -200,10 +200,15 @@ body {
     vertical-align: top;
   }
 
-  /* Left edge of first column */
+  /* No outer left/right borders */
   .beer-table.mobile th:first-child,
   .beer-table.mobile td:first-child {
-    border-left: 1px solid var(--orange);
+    border-left: none;
+  }
+
+  .beer-table.mobile th:last-child,
+  .beer-table.mobile td:last-child {
+    border-right: none;
   }
 
   /* Bottom border on last row */
