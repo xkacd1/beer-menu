@@ -12,7 +12,7 @@ async function loadBeers() {
       <td class="epm">${beer.epm || ""}°</td>
       <td class="name">
         <strong>${beer.nazev}</strong>
-        <span>${beer.nazev_pivovaru || ""}</span>
+        <span> <strong>${beer.nazev_pivovaru || ""}</strong></span>
       </td>
       <td>${beer.styl}</td>
       <td class="abv">${beer.avb || "–"}%</td>
