@@ -363,6 +363,8 @@ body.tv-mode .beer-table td.name {
 body.tv-mode .beer-table td.name strong,
 body.tv-mode .beer-table td.name span {
   color: #E95F25;
+  font-size: 1.8rem !important;
+  display: block;
 }
 
 body.tv-mode .beer-table.mobile {
