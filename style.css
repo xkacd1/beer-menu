@@ -300,6 +300,33 @@ body.tv-mode .beer-table {
   border-collapse: collapse;
 }
 
+/* Remove outer borders, thicker inner lines */
+body.tv-mode .beer-table th,
+body.tv-mode .beer-table td {
+  border: none;
+  border-top: 2px solid var(--orange);
+  border-right: 2px solid var(--orange);
+}
+
+body.tv-mode .beer-table th:first-child,
+body.tv-mode .beer-table td:first-child {
+  border-left: none;
+}
+
+body.tv-mode .beer-table th:last-child,
+body.tv-mode .beer-table td:last-child {
+  border-right: none;
+}
+
+body.tv-mode .beer-table tr:last-child th,
+body.tv-mode .beer-table tr:last-child td {
+  border-bottom: none;
+}
+
+body.tv-mode .beer-table thead tr:first-child th {
+  border-top: none;
+}
+
 body.tv-mode .beer-table tr:nth-child(even) {
   background-color: rgba(255, 90, 31, 0.05);
 }
