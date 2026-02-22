@@ -298,11 +298,12 @@ body.tv-mode .beer-table th {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   text-align: left;
+  color: var(--text);
 }
 
 body.tv-mode .beer-table td {
   font-size: 1.8rem;
-  color: #E95F25;
+  color: var(--text);
 }
 
 body.tv-mode .beer-table .num {
@@ -312,11 +313,16 @@ body.tv-mode .beer-table .num {
   opacity: 0.7;
   font-weight: 700;
   padding-left: 10px;
+  color: var(--text);
 }
 
-body.tv-mode .beer-table .name span {
-  font-size: 1.8rem;
-  opacity: 0.85;
+/* Third column (beer name) - orange text, black header */
+body.tv-mode .beer-table td.name {
+  color: #E95F25;
+}
+
+body.tv-mode .beer-table td.name strong,
+body.tv-mode .beer-table td.name span {
   color: #E95F25;
 }
 
