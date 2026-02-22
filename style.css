@@ -252,9 +252,21 @@ body {
   }
 }
 
+/* -------- Table Logo -------- */
+.table-logo {
+  display: none !important;
+}
+
 /* -------- TV MODE -------- */
 body.tv-mode .beer-table.mobile {
   display: none !important;
+}
+
+body.tv-mode .table-logo {
+  display: block !important;
+  width: auto;
+  max-height: 40px;
+  height: 40px;
 }
 
 body.tv-mode .site-header {
